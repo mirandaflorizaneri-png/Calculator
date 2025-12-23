@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A neat, clean, accessible calculator with animated backgrounds." />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+    <div class="math-bg" aria-hidden="true">
+        <span>+</span><span>−</span><span>×</span><span>÷</span><span>%</span>
+    </div>
+
+    <main class="app" role="main">
+        <section class="calculator" aria-label="Calculator" role="region">
+            <header class="calc-header">
+                <h1>Calculator</h1>
+                <p class="subtitle">Fast, accessible, and responsive</p>
+            </header>
+
+            <div class="display-wrap">
+                <input id="display" class="display" type="text" inputmode="decimal" aria-label="Calculator display" value="0" readonly aria-live="polite" role="status">
+            </div>
+
+            <div class="keys" role="grid">
+                <button class="btn btn-ac" data-action="clear" aria-label="Clear">AC</button>
+                <button class="btn" data-action="backspace" aria-label="Backspace" title="Backspace">⌫</button>
+                <button class="btn" data-action="percent" aria-label="Percent">%</button>
+                <button class="btn" data-action="divide" aria-label="Divide">÷</button>
+
+                <button class="btn" data-value="7">7</button>
+                <button class="btn" data-value="8">8</button>
+                <button class="btn" data-value="9">9</button>
+                <button class="btn" data-action="multiply" aria-label="Multiply">×</button>
+
+                <button class="btn" data-value="4">4</button>
+                <button class="btn" data-value="5">5</button>
+                <button class="btn" data-value="6">6</button>
+                <button class="btn" data-action="subtract" aria-label="Minus">−</button>
+
+                <button class="btn" data-value="1">1</button>
+                <button class="btn" data-value="2">2</button>
+                <button class="btn" data-value="3">3</button>
+                <button class="btn" data-action="add" aria-label="Plus">+</button>
+
+                <button class="btn btn-zero" data-value="0">0</button>
+                <button class="btn" data-value=".">.</button>
+                <button class="btn btn-equal" data-action="equals" aria-label="Equals">=</button>
+            </div>
+
+            <footer class="calc-footer">Tip: Use keyboard for quick input (Enter, Backspace, Esc)</footer>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
